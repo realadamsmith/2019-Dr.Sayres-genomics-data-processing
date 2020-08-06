@@ -42,8 +42,8 @@ cat theebola.gb | readseq -p -format=GFF > ebola.gff
 cat ebola.gff
 
 
-#2. Find a variant then explain its effect(s). 10/10 points possible
-#Response: On the 491st base of ebola.fa, there is a variant call for a possible mutation of the SRR read on the 8th amino acid
+#2. Find a variant then explain its effect(s).
+#On the 491st base of ebola.fa, there is a variant call for a possible mutation of the SRR read on the 8th amino acid
 #for the CDS site for the virus' nucleoprotein. This variant call seen on the IGV and GFF, show that the variant on the 8th
 #amino acid for this CDS results in a change from Isoleucine to Valine. This still results in a nonpolar amino acid, and
 #results in only 1 less methyl group, but it could still have drastic effects on the formation of the nucleoprotein which
