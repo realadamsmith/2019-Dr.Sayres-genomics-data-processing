@@ -21,7 +21,6 @@ REF=$ACC
 #This is an ebola SRR
 SRR=SRR7813721
 BAM=$SRR.bam
-#The variables for PAIRED end fastq-dumps, not others.
 R1=${SRR}_1.fastq
 R2=${SRR}_2.fastq
 
@@ -40,19 +39,6 @@ bcftools call --ploidy 1 -vm -Ov $SRR.vcf > ebola11_18.vcf
 #To get the GFF file of the Reference genome, I downloaded the GB file of the Reference, then converted it to GFF with readseq to "cat" and read.
 cat theebola.gb | readseq -p -format=GFF > ebola.gff
 cat ebola.gff
-
-
-#2. Find a variant then explain its effect(s).
-#On the 491st base of ebola.fa, there is a variant call for a possible mutation of the SRR read on the 8th amino acid
-#for the CDS site for the virus' nucleoprotein. This variant call seen on the IGV and GFF, show that the variant on the 8th
-#amino acid for this CDS results in a change from Isoleucine to Valine. This still results in a nonpolar amino acid, and
-#results in only 1 less methyl group, but it could still have drastic effects on the formation of the nucleoprotein which
-#encapsidates the genomic RNA. This loss of a methyl group would probably result in a loss of hydrophobic power to the
-#nucleoprotein, and this small of an amino acid change could still significantly impact the way this protein aggregates
-#to form the nucleoprotein. This is again just describing the single variant found in this protein coding region starting
-#at 470-2689 bp. The protein ID is AAD14590.1, and its description on UniProtKB describes this protein as being able to
-#oligomerize into helical filaments to encapsidate the viral genome. It also appears to be a pretty multifunctional
-#protein, all of which could be affected by this variant, changing its affinity to surrounding proteins.
 
 #CONDENSED SCRIPT
 source activate bioinfo
